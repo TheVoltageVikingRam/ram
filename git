@@ -19,3 +19,51 @@ Master: The default branch that Git creates for  when a new repository initializ
 Merge Conflict: This occurs when the changes are made on the same part of the same  file, and Git won't know how to merge those changes.
 Rollback: The act of reverting changes made to a software to a  previous state
 Three-way merge: A merge when the  snapshots at the two branch tips with the most recent common ancestor, the  commit befoe  the divergence.
+
+What is secure shell?
+
+Secure shell is a robust protocol for connecting to servers remotely.In the realm  of remote server access, security is going to be more and more
+important to  keep your information safe. Secure shell  is primarily used for logging in to Linux  Servers, Unix Servers and certain networking
+equipment such routers.
+
+ALternatives to SSH
+
+SSH provides a shield against prying eyes, but how does it compare to alternatives?
+Telnet is one popular alternative. Telnet exposes your type commands  including passwords, to anyone on the network  with right tools/
+Although Transport Layer Security (TLS) encrypts data within browsers, SSH secures data in interactive terminal sessions or file transfers.
+This encryption ensures that sensitive information remains confidential during communications.
+
+Another alternative is virtual private networks (VPNs). VPNs also offer encryption but grant access to entire networks after connection. SSH adheres
+to entire networks after connection. SSH adheres to the principle of least privilege, restricting users to specific hosts, enhancing security.
+Another option might be remote-control software like VNC or GoToMyPC. They focus on graphical user interface and desktop experiences, which
+may not align with most Linux servers that operate sans desktop environments.
+
+Operation
+
+SSH operates through two key componenets: the SSH server and the SSH client. The SSH server, residing on the target device, establishes secure network 
+connections, undergoes mutual authentication, and intiates encrypted login sessions or file transfers.
+
+Conversely, the SSH client establishes a connection to the SSH server, ensuring a secure interaction. The client makes requests, such as "log me in" or 
+"copy this file."
+
+SSH keys
+
+In the SSH protocol, an access credential is known as an SSH key. It serves a similar purpose as usernames and passwords, although system administrators
+and power users typically use the keys to automate procedures and achieve single sign-on.
+
+Displaying the fingerprint of an SSH key is a useful way to verify that you're using the correct and that the remote server's key  hasn't been tampered
+with. To display the finger print of an SSH key, you can use the SSH-keygen command-line tool.
+
+Key takeaways
+
+
+SSH prioritizes security in remote server access: Secure shell (SSH) is a robust and trusted protocol for securely connecting to servers remotely. It
+finds widespread use in accessing Linux servers, Unix servers and specific networking equipmen, serving as a sheild against unauthorized access 
+and breaches.
+
+Comparing SSH with alternatives: When you compare SSH to alternatives like Telnet, its security superiority becomes  clear.
+Telent exposes commands including passwords, to  potential  threats , whereas SSH's encryption guarantees confidentiality during interactions with the 
+server and enables secure login or file copying.
+
+Just like a password, the security of your SSH key is critical. Never share yout SSH private key with anyone or put SSH keys into your application code.
+WIth someone having access to your information, they can gain unauthorized access by logging in and pretending to be you.
