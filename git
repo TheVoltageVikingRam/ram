@@ -67,3 +67,59 @@ server and enables secure login or file copying.
 
 Just like a password, the security of your SSH key is critical. Never share yout SSH private key with anyone or put SSH keys into your application code.
 WIth someone having access to your information, they can gain unauthorized access by logging in and pretending to be you.
+
+SSH Protocol
+When discussing computer networks, the word "shell" refers to a program that provide an interface for accessing another operating system.\
+With all the efforts put into keeping your machine secure , you certainly want security when its connected to another machine.
+The secure shell network protocol, usually shorthanded to "SSH" , allows secure access to a computer over an unsecured network.
+
+What is a protocol 
+A protocol is a set of rules for how two things should communicate with each other. You may have heard the phrase "military protocol".  
+which refers to the strict guidelines that govern communications between members of the armed forces in all situations. 
+In the cae of computer protocols, these are usually published as an open standards so that any given protocol be implemented in various 
+products. Having these protocols readily available to anyone can be implemented in various products. Having these protocols readily 
+available to everyone means that any machine or network implements a given protocol should be able to communicate seamlessly with anything
+else that supports the same protocol.
+
+For a deeper dive into the secure shell.
+
+
+The SSH protocol
+So how does SSH secure the network?
+It works on the principle of public-private key encryption. The client and the server each generate a strong encryption key  for any data 
+that is passed between them. Then, that key   gets split in half with the client retaining  one portion and the server keeping the other.
+It's a complex version of simple idea, really its not hard to imagine two people making up an encryption code and then tearing it half
+for extra secrecy
+
+
+In SSH, the keys are split between a public key, the public's half of the server's encryption key,  and the private key, which is stored
+only on the server. This way, a user's machine can encrypt a message using the public key, but only the connnected server can decode it
+because the server's private key will successfully decrypt the message. This waym if someone did intercept the network traffic, they still
+could'nt read it because they don't have the server's private key. Using SSH, your keystrokes and the server's responses are completely 
+secured.
+
+Using the SSH protocol
+
+The SSH protocol is commonly used for logging in to the servers remotely. While its primarily used for logging to linux and Uix servers, 
+it is also used to encrypt file  transfers and to login to some  network equipment,  like routers.
+
+
+Of course, your private key should never be transimtted to anyone else or shared anywhere. Most SSH clients will not connect if your
+private ket is protected from other users. Because your private key is unique to you , it can serve as both authentication
+and encryption, so the server don't need to ask you for password.
+
+Besides providing a secure login shell on a remote server, SSH can be used for a  number of other functions including:
+
+*Transfering files between client and server with SCP (Secure copy protocol) or SFTP (Secure File Transfer Protocol); for more
+about these types of file transfers see the differences between SFTP and SCP.
+
+*Forwarding network ports from server to client, or "tunneling".
+
+*Relaying your login to yet another server behind  firewall, sometimes referred to as a "jump box" or "bastion host";for more on this
+relaying method.
+
+*Running graphical user interface (GUI) applications on a server but displaying them on a local client.
+
+
+
+
