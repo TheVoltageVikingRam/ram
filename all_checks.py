@@ -1,8 +1,5 @@
 #!/bin/usr/env python3
 
-
-
-
 def main():
     if check_reboot():
         print("Pending Reboot.")
