@@ -2,7 +2,6 @@ import os
 import sys
 import shutil
 
-
 def check_disk_full(disk, min_gb,  min_percent):
 	"""Returns True if there isnt enough disk space, False Otherwise."""
 	du = shutil.disk_usage(disk)
