@@ -31,6 +31,13 @@ def check_cpu_constrained():
         """Returns True if the cpu is having too  much usage, False otherwise."""
         return psutil.cpu_present(1) > 75
 
+
+
+
+#Ram Tripathi
+
+
+
 def check_no_network():
 	"""Returns True if it falls to resolve GooglE'S URL, False otherwise"""
 	try:
