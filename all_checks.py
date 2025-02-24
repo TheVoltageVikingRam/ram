@@ -19,6 +19,9 @@ def check_cpu_constrained():
 	"""Returns True if the cpu is having too  much usage, False otherwise."""
 	return psutil.cpu_present(1) > 75
 
+
+#Ram Tripathi
+
 def check_no_network():
     """Returns True if it fails to resolve Google's URL, False otherwise."""    
     try:
@@ -26,6 +29,9 @@ def check_no_network():
         return False
     except:
         return True
+
+
+
 
 #this is an intentional  modification
 def main():
