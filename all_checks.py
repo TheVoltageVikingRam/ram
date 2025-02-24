@@ -22,7 +22,7 @@ def check_no_network():
         socket.gethostbyname("www.google.com")
         return False
     except:
-        return Tru
+        return True
 
 
 def main():
