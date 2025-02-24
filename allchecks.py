@@ -7,6 +7,8 @@ import os
 import sys
 import shutil
 import socket
+import psutil
+
 
 def check_disk_full(disk, min_gb,  min_percent):
 	"""Returns True if there isnt enough disk space, False Otherwise."""
@@ -29,7 +31,7 @@ def check_root_full():
 
 def check_cpu_constrained():
         """Returns True if the cpu is having too  much usage, False otherwise."""
-        return psutil.cpu_present(1) > 75
+        return psutil.cpu_percent(1) > 75
 
 
 
@@ -51,6 +53,7 @@ def main():
 	     (check_reboot, "Pending Reboot"),
 	     (check_root_full, "Root Partition Full"),
 	     (check_no_network, "No working network."),
+	     (check_cpu_constrained, "cpu overload"),
 
 	]
 	everything_ok=True
