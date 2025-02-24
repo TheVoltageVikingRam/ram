@@ -1,3 +1,15 @@
+Here are some tips to  keep  in mind when you're resolving merge conflicts
+
+After running Git merge, a message will appear informing that a conflict occured on the file.
+Read the error messages that imply you cannot push your local changes to Github especially the remote changes with Git pull
+Use the command line or Github desktop to push the changes to your branch on GitHub after you make a local clone of the repository for all other types of merge conflicts.
+Before merging any commits to the master branch, push it into a remote repository so that collaborators can view the code,  test it and inform you that it's ready for merging.
+Use the git rebase command to replay the new commits on top of  the new base and then merge the feature back into the master.
+
+Key takeaways
+It is important to effectively resolve merge conflicts because local changes cannot be made  to  Git untill the merge conflicts have been locally resolved.
+Once all conflicts have been resolved, changes can be pushed to Git and merged in a pull request.
+
 This is demonstration of git and github fundamnetals course by google.
 Always synchronize your branches before starting any work on your own.o
 Avoid having very large changes that modify a lot of different things.
