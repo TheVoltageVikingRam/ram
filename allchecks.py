@@ -1,10 +1,12 @@
-#!/bin/usr/env python3
+#!/usr/bin/env python3
 #Ram22HEL2231
+
+
 
 import os
 import sys
 import shutil
-
+import socket
 
 def check_disk_full(disk, min_gb,  min_percent):
 	"""Returns True if there isnt enough disk space, False Otherwise."""
@@ -29,11 +31,20 @@ def check_cpu_constrained():
         """Returns True if the cpu is having too  much usage, False otherwise."""
         return psutil.cpu_present(1) > 75
 
+def check_no_network():
+	"""Returns True if it falls to resolve GooglE'S URL, False otherwise"""
+	try:
+		socket.gethostbyname("www.google.com")
+		return False
+	except:
+		return True
 
 def main():
 	checks=[
 	     (check_reboot, "Pending Reboot"),
 	     (check_root_full, "Root Partition Full"),
+	     (check_no_network, "No working network."),
+
 	]
 	everything_ok=True
 
