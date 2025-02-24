@@ -24,7 +24,7 @@ def check_no_network():
     except:
         return True
 
-
+#this is an intentional  modification
 def main():
     checks = [
             (check_reboot, "Pending Reboot."),
