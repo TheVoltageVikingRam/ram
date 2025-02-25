@@ -1,0 +1,141 @@
+Forking
+A way of creating a copy of the given repository so that it belongs to our user.
+
+Pull request
+A commit or series of commits that you send to the owner of the repository so that they incorporate it into their tree.
+
+Git forks and pull requests
+
+GitHub is an open-source platform for collaboration and knowledge sharing, allowing users to explore code created by others. This study guide will provide you with pointer 
+on effectively using the platform to make pull requests in the Git envionment.
+
+Pull requests
+Pull requests allow you to inform fellow contributors about changes that have been made to a branch in Git. When pulling requests, you can discuss and evaluate proposed
+changes before implementing changes to the primary branch.
+You can eventually merge changes back to the main repository (or repo) by creating a pull request. However, it is important to note that before any changes are made to the 
+original code, GitHub creates a fork (or a copy of the project), which allows changes to be committed to the fork copy even if changes cannot be pushed to the other repo.
+Anyone can suggest changes through the inline comment in pull requests, but the owner only has the rights to review and approve changes before merging them.
+To create a pull request:
+
+*Make changes to the file.
+*Change the proposal and complete a description of the change.
+*Click the proposed file change button to create in the forked repo to send the change to  the server.
+*Enter comments about the change. If more context is needed about the change, use the text box.
+*Click Pull Request.
+
+When creating multiple commits, a number next to the pull request serves as the identifier for accessing the pull requests in the future. This  is important because it
+allows project maintainers to follow up with questions or comments.
+
+main A-->B-->C
+Feature A-->B-->C-->D-->E
+
+Main A-->B-->C-->F
+ Squash and merge: D+E into F in main
+
+You can merge pull requests by retaining the commits. Below is a list of pull request merge options that you can use when merging pull requests.
+
+Merge commits: All commits from  the feature branch are added to the base branch in  a merge commit  using the --on-ff option.
+
+Squash and merge commits: Multiple commits of a pull request are squashed or combined into a single commit, using the fast-forward option. It is recommended that when
+merging two branches, pull requests are squashed and merged to prevent the likelihood of conflicts due to redundancy.
+
+Merge message for a squash merge: GitHub generates a default commit message, which you can edit. This message may include the pull request title, pull request description
+, or information about the commits.
+
+Rebase and merge commits: All commits from the topic branch are added into the base brnahc individually without a merge commit.
+Indirect merges: GitHub can merge a pull request automaticallly if the head branch is directly or indirectly merge into the base branch externally.
+
+Key Takeaways:
+
+Pull Requests are a crucial tool you can use for efficiently capturing, implementing and receving approvals for changes. These capabilties are made possible through
+collanboration. Practicing pull request can help you hone skills and contribute to a project.
+
+Code review
+Going through someone else's code , documentation,or configuration and checking that it all makes sense and follows the expected patterns.
+
+More Information on Code Reviews
+
+Consistent coding standards are essential for large-scale projects, ensuring readability and maintainability. Google's tyle guifes stand as prominent examples of how such
+norms can be establlished and adhered to diverse teams. Code review are also  essential in order to produc equality code. This reading delves into the principles of code
+review strategies and the significance of style guides, shedding light on thier impact on software development practices and outcomes.  You'll ecxplore Google's style guides ,
+learn about diverse code review strategies, and gain insights into the significance of pull request reviews.
+
+Google Style guides
+Every major open source project includes a style guide, which is set norms for writing code for that project. When all of te code in a huge codebase is written in the same
+manner, it is considerbaly simpler to understand.
+
+Code review
+Code review also referred to as peer code  review, is the deliberate and methodical gathering of other programmes to examineeach other's code for errors. Code review can 
+speed up and simplify the software development process,unlike other techniques. Peer reviews also save time and money . especially by catching the kinds of defects that 
+could sneak through testingm production and into the laptops  of enhd users.
+
+Common code review strategies
+
+Pair programming
+This method of building software places engineers side-by-side, working on the same code together, Pair programming is one the defining characteristics of extreme Programming
+(XP). It seems to intergrate code review directly into the programming and is a fantastic technique for  senior engineers to mentor hunior team members. However different
+approaches to code review might offer greater objectivity because writers and even co-authors often become too familiar with their own work, Compared to other approaches,
+ pair programming can require  more staff and time resources.
+
+The email thread
+
+With the email strategy, a file is sent to the appropriate coworkers through email  as soon as a particular piece of code is prepared for review, so they can individually
+review it. Although this method can be more adaptabe and flexible than more conventional approaches, an email thread of suggestions and divergent opinions can become confusing
+very quickly, leaving the original coder to sort through it all.
+
+Over the shoulder
+
+One of the oldest,simplest, and most natural  ways to participate in peer code review is the over-the-shoulder technique, which is more comforatble for most engineers tha 
+XP's  pair programming. When your code is complete . ask a coworker to evaluate it while you explain why you created it thhat way.
+
+Tool assisted 
+Software based code review tools ,some of which are browser based or seamlessly intergrate into a range of commojn IDE and SCM development frameworks are the final form of 
+code review. Software too;s enable review to happen asynchronously and non locally,issuing notifications to the orignal coder when new reviews come in.The tools  keep the review
+process moving efficiently with no meetings and no one leave their desks to contribute. Some techniques can also produce vital  usage statistics that provide the audit trials
+and review metrics required for process improvement and compliance reporting.
+
+Pull request review
+
+A pull request (PR) is a procedure where new code is examined before it is merged to create a branch or master branch in GitHub. Before a pull request ismerged, review give conributors
+the opprotunity to comment on the modifications suggested in the request,  accept the changes, or ask for additional  changes. Administrators of the repository can mandate 
+that each pull request be accpted before it is merged.
+
+Anyone with read access can review and comment on the changes proposed n a pull request once it has been opened. Additionally,  you can make precise changes to code lines that the author
+can implement right from the pull request. If you are interested in learning more about reviewing proposed changes in a pull request.
+
+Five tips for pull request reviews
+
+Some of the considerations you should have with pull request review are:
+
+1. Be selective with reviewers: It's important to select a reasonable number of reviewers fora pull request. Addding too many reviewers can lead to inefficient use of resources
+,  as too many people reviewing code may not be productive.
+
+2. Timley reviews: Ideally, reviews should be completed with two hours of the pull request being submitted. Delays in reviews can lead to context switching and hinder overall
+productivity.
+
+3. Constructive feedback: Feedback should be constructive and explain what needs to be changes and more importantly, why those changes. Friendly and non-accusatory language
+fosters a positive atmosphere.
+
+4. Detailed  pull request description: The pull request should include a detailed description that covers the changes made in the feature branch comapred to the develpment 
+brach, prerequisites, usage instructions, design changes with comparisons to mockups and any additional notes that reviewers shoulld be awware of. This information
+ensures that reviewers have a comprehensive understanding of the changes.
+
+5. Interactive rebasings: Interactive Rebasings allow developers to modify individual commits without cluttering the commit historyy with reduntant or unrelated changes.
+Keeping commits clean and relevant contributes to a more organised and maintainable codebase.
+
+Key Takeaways:
+
+*Importance of consistent coding standards: Maintaining uniform coding standards ensures readbility and ease of maintenane. Googl'es style guides serve as prime examples of 
+establishing and adhering to such norms across diverse  teams.
+
+*Role of code reviews: Code reveiws, or peer code reviews , involve organised examination by fellow programmers, speeding up development and catching defects that might
+bypass testing, saving time and resources.
+
+*Diverse code review strategies: Pair programming, email threads, over the shoulder evaluations and tool assisted review strategies offer different levels of collaboraton
+and objectivity, cateringto different project needs.
+
+*Pull request reviews: Pull request reviews provide opporuntiy for collaborative examination of new code before integration. Accessible to those with read access, PR reviews
+enable inclusive feedback and ensure code quality through timely and constructive comments.
+
+
+
